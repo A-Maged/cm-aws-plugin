@@ -37,10 +37,19 @@ class cm_aws_plugin
             ]
         ]);
 
+        add_action('admin_menu', [$this, 'setupMenu']);
         add_action( 'setKeyAndExpiration', [$this, 'setKeyAndExpiration'], 10, 2 );
         add_action( 'thePresignedUrl', [$this, 'thePresignedUrl'] );
     }
 
+
+    public function setupMenu(){
+        add_menu_page( 'cm aws Plugin Page', 'cm aws', 'manage_options', 'cm-aws-plugin', [$this, 'pageContent']);
+    }
+    function pageContent(){
+        echo "<h1>Hello World!</h1>";
+    }
+    
     // outputs the Presigned url of the file
     public function thePresignedUrl()
     {
