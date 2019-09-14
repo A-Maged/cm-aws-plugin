@@ -11,7 +11,7 @@ $cm_plugin = new cm_aws_plugin([
 ]);
 ```
 
-### Step 2:In your templates
+### Step 2: In your templates
 ```php
 $file_name = 'videos/Unbuilt-Animation-540p.mp4';
 $link_expiration = '+12 minutes';
