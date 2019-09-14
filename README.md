@@ -1,7 +1,8 @@
 # Usage:
 
-### Step 1: Populate these with your info
+### Step 1: In functions.php
 ```php
+/* Populate these with your info */
 $cm_plugin = new cm_aws_plugin([
     'AWS_ACCESS_KEY_ID' => '',
     'AWS_SECRET_ACCESS_KEY' => '',
@@ -10,7 +11,7 @@ $cm_plugin = new cm_aws_plugin([
 ]);
 ```
 
-### Step 2: In your templates
+### Step 2:In your templates
 ```php
 $file_name = 'videos/Unbuilt-Animation-540p.mp4';
 $link_expiration = '+12 minutes';
