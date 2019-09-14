@@ -68,23 +68,3 @@ class cm_aws_plugin
     }
 
 }
-
-
-
-/***************************************************************************/
-/* USAGE: */
-/************/
-
-/* populate these with your info */
-$cm_plugin = new cm_aws_plugin([
-    'AWS_ACCESS_KEY_ID' => '',
-    'AWS_SECRET_ACCESS_KEY' => '',
-    'AWS_DEFAULT_REGION' => '',
-    'AWS_BUCKET' => '',
-]);
-$file_name = 'videos/Unbuilt-Animation-540p.mp4';
-$link_expiration = '+12 minutes';
-
-// in your templates
-do_action( 'setKeyAndExpiration', $file_name, $link_expiration);
-do_action( 'thePresignedUrl');
